@@ -7,12 +7,23 @@ import FolderOpenTwoToneIcon from '@mui/icons-material/FolderOpenTwoTone';
 import SendTwoToneIcon from '@mui/icons-material/SendTwoTone';
 import CloseTwoToneIcon from '@mui/icons-material/CloseTwoTone';
 import GridViewTwoToneIcon from '@mui/icons-material/GridViewTwoTone';
+import WbSunnyTwoToneIcon from '@mui/icons-material/WbSunnyTwoTone';
+import BedtimeTwoToneIcon from '@mui/icons-material/BedtimeTwoTone';
 
 
 const Header = () => {
 
     /*======Toggle Menu======*/
     const[Toggle, showMenu] = useState(false);
+
+    /*======Dark Mode======*/
+    const[DarkMode, setDarkMode] = useState(false);
+
+    /*======Toggle Darkmode======*/
+    const toggleDarkMode = () => {
+        setDarkMode(!DarkMode);
+        document.body.classList.toggle('dark-mode');
+    }
 
   return (
     <header className="header">
@@ -56,9 +67,17 @@ const Header = () => {
             
             </div>
             
+            {/* Nav Toggle for smalls screens */}
+
             <div className="nav__toggle" onClick={() => showMenu(!Toggle)}>
                 <GridViewTwoToneIcon className="app nav__icon"/>
             </div>
+
+            {/* Set dark mode button */}
+
+            <button className="dark-mode-toggle" onClick={toggleDarkMode}>
+                {DarkMode ?  <WbSunnyTwoToneIcon/> : <BedtimeTwoToneIcon/>}
+            </button>
         </nav>
     </header>
   )

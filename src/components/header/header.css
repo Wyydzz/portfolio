@@ -47,6 +47,25 @@
 .active-link,
 .nav .nav__link:hover {
     color: var(--title-color-dark);
+    transform: scale(1.1);
+    transition: transform ease 0.3s;
+}
+
+
+.dark-mode-toggle {
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+    color: var(--title-color);
+    transition: color 0.3s;
+    margin-top: 0.5rem;
+}
+
+.dark-mode-toggle:hover {
+    color: var(--title-color-dark);
+    transform: scale(1.1); /*grossit de 10%*/
+    transition: transform 0.3s ease;
 }
 
 
