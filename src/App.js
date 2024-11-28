@@ -7,6 +7,8 @@ import About from './components/about/About';
 import Skills from './components/skills/Skills';
 import Projects from './components/projects/Projects';
 import Project1Details from './components/projects/Project1Details';
+import Project2Details from './components/projects/Project2Details';
+import Project3Details from './components/projects/Project3Details';
 
 
 
@@ -27,6 +29,8 @@ const App = () => {
             </>
           } />
           <Route path="/project1-details" element={<Project1Details />} />
+          <Route path="/project2-details" element={<Project2Details />} />
+          <Route path="/project3-details" element={<Project3Details />} />
         </Routes>
       </main>
     </Router>

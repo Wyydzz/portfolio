@@ -1,5 +1,5 @@
 import React from 'react';
-import BarCodeImg from '../../assets/assets/photo2.jpg';
+import BarCodeImg from '../../assets/assets/barcode-bw.jpg';
 
 const Items = () => {
     return (

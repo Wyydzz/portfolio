@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import "./projectdetails.css";
 import BarCodeImg from '../../assets/assets/barcode-bw.jpg';
 
-const Project1Details = () => {
+const Project2Details = () => {
     const [activeTab, setActiveTab] = useState("overview");
 
     return (
         <div className="project-details">
             <div className="project-details__header">
-                <h1 className="project-details__title">Projet 1</h1>
+                <h1 className="project-details__title">Projet 2</h1>
                 <p className="project-details__subtitle">
                     A C-based dice game project focusing on planning and logic circuits.
                 </p>
@@ -89,4 +89,4 @@ const Project1Details = () => {
     );
 };
 
-export default Project1Details;
+export default Project2Details;

@@ -1,0 +1,115 @@
+/* Global container for the project */
+.project-details {
+    color: var(--text-color);
+    padding: 2rem 1rem;
+    display: flex;
+    /* flex-direction: column;  */
+    align-items: center; /* Centre horizontalement */
+  }
+  
+  /* Header section */
+  .project-details__header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .project-details__title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--title-color-dark);
+  }
+  
+  .project-details__subtitle {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-top: 0.5rem;
+  }
+  
+  /* Content section */
+  .project-details__content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  /* Image section */
+  .project-details__image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Info section */
+  .project-details__info {
+    flex: 1;
+    max-width: 600px;
+  }
+  
+  /* Tabs navigation */
+  .tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .tab-links {
+    position: relative;
+    padding: 0.5rem 1rem;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--text-color); /* Ajuste selon ton thème */
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .tab-links:hover {
+    color: var(--text-color); /* Couleur au survol */
+  }
+  
+  .tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: var(--text-color); /* Ligne colorée */
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.5s ease;
+  }
+  
+  .tab-links.active::after {
+    width: 50%; /* Largeur de la ligne active */
+  }
+  
+  
+  /* Tab content */
+  .tab-content {
+    background: var(--container-color);
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tab-panel {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .tab-panel ul {
+    padding-left: 1rem;
+  }
+  
+  .tab-panel li {
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+  }
+  
+  .tab-panel strong {
+    color: var(--title-color-dark);
+  }
+  

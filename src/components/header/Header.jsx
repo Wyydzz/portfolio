@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import "./header.css";
 import HomeTwoToneIcon from '@mui/icons-material/HomeTwoTone';
 import PersonOutlineTwoToneIcon from '@mui/icons-material/PersonOutlineTwoTone';
@@ -19,16 +19,35 @@ const Header = () => {
     const [Toggle, showMenu] = useState(false);
 
     /* Dark Mode */
-    const [DarkMode, setDarkMode] = useState(false);
+    /* Vérifie si le mode sombre est déjà activé dans le localStorage */
+    const storedDarkMode = localStorage.getItem("darkMode") === "true";
+
+    const [DarkMode, setDarkMode] = useState(storedDarkMode);
+
+
+    
 
     /* Toggle Dark Mode */
     const toggleDarkMode = () => {
         setDarkMode(!DarkMode);
-        document.body.classList.toggle('dark-mode');
+        localStorage.setItem("darkMode", !DarkMode);
+        document.body.classList.toggle("dark-mode", !DarkMode);
     };
 
+    useEffect(() => {
+        //Applique le mode sombre dès le chargement de la page
+        if(DarkMode){
+            document.body.classList.add("dark-mode");
+        }
+        else {
+            document.body.classList.remove("dark-mode");
+        }
+    }, [DarkMode])
+
     // Vérifier si l'utilisateur est sur une page de détails
-    const isDetailsPage = location.pathname.startsWith('/project1-details');
+    const isDetailsPage = location.pathname.startsWith('/project1-details') || 
+                      location.pathname.startsWith('/project2-details') || 
+                      location.pathname.startsWith('/project3-details');
 
     return (
         <header className="header">
