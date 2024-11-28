@@ -166,40 +166,6 @@
   
   /* For medium devices */
 
-  /* Ici la première itération est celle du tuto, mais ne convenait pas */
-
-  /* @media screen and (max-width: 768px){
-
-    
-    /* .home__content{
-        grid-template-columns: 0.5fr 3fr;
-        padding-top: 3.5rem;
-    } */
-    /*
-
-    .home__img{
-        order: initial;
-        justify-self: initial;
-    }
-
-    .home__data{
-        grid-column: 1/3;
-        
-    }
-
-    .home__img{
-        box-shadow: inset 0 0 0 6px rgb(255 255 255 / 30%);
-        width: 200px;
-        height: 200px;
-    }
-
-    .home__scroll{
-        display: none;
-    }
-
-     
-  } */
-
   /* Content perso, plus centré */
 
   @media screen and (max-width: 768px) {
