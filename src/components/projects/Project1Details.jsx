@@ -1,19 +1,18 @@
 import React from 'react';
-import Items from './Items';
 import "./projects.css";
 
-const Projects = () => {
+const Project1Details = () => {
   return (
-    <section className="projects section" id="projects">
-        <h2 className="section__title">My Projects</h2>
+    <div className="project1-details">
+      <h2 className="section__title">My Projects</h2>
         <span className="section__subtitle">Most recent work</span>
         <div className="projects__container container grid">
 
-          <Items/>
+            <span>test</span>
             
         </div>
-    </section>
+    </div>
   )
 }
 
-export default Projects
+export default Project1Details

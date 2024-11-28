@@ -12,8 +12,12 @@
     --sat: 0%;
     --title-color: hsl(var(--hue), var(--sat), 20%);
     --title-color-dark: hsl(var(--hue), var(--sat), 0%);
+    --title-color-dark-overlay: hsl(var(--hue), var(--sat), 80%);
     --text-color: hsl(var(--hue), var(--sat), 46%);
     --body-color: hsl(var(--hue), var(--sat), 98%);
+    --body-color-rgb-dark: 255,255,255;
+    --body-color-rgb-light: 26, 26, 51;
+    
     --container-color: #fff;
 
     /*====Font and Typography====*/
@@ -58,11 +62,16 @@
     --sat: 10%;
     --title-color: hsl(var(--hue), var(--sat), 90%);
     --title-color-dark: hsl(var(--hue), var(--sat), 80%);
+    --title-color-dark-overlay: hsl(var(--hue), var(--sat), 0%);
     --text-color: hsl(var(--hue), var(--sat), 70%);
     --body-color: hsl(var(--hue), var(--sat), 10%);
+    --body-color-rgb: var(--body-color-rgb-dark);
     --container-color: #1c1c1c;
 }
 
+  body {
+  --body-color-rgb: var(--body-color-rgb-light);
+  }
 /*====Responsive Typography====*/
 @media screen and (max-width: 992px) {
   :root {
@@ -97,6 +106,7 @@ textarea {
 }
 
 
+  
 body {
   background-color: var(--body-color);
   color: var(--text-color);
