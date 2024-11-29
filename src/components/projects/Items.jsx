@@ -1,5 +1,5 @@
 import React from 'react';
-import BarCodeImg from '../../assets/assets/barcode-bw.jpg';
+import BarCodeImg from '../../assets/assets/barcode.jpg';
 import OpenInNewTwoToneIcon from '@mui/icons-material/OpenInNewTwoTone';
 
 const Items = () => {

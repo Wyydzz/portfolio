@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./projectdetails.css";
-import BarCodeImg from '../../assets/assets/barcode-bw.jpg';
+import BarCodeImg from '../../assets/assets/barcode.jpg';
 
 const Project1Details = () => {
     const [activeTab, setActiveTab] = useState("overview");

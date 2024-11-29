@@ -16,8 +16,8 @@ const About = () => {
                 <p className="about__description">
                 Junior in Computer Science  | Passionate About Innovation and Problem-Solving | Seeking Experience in Software Engineering
                 </p>
-
-                <a download="" href={CV} className="button button__flex">Download CV
+              <div className="about__button">
+              <a download="" href={CV} className="button button__flex">Download CV
                 <svg
                 class="button__icon"
                 xmlns="http://www.w3.org/2000/svg"
@@ -44,6 +44,8 @@ const About = () => {
                 ></path>
               </svg>
                 </a>
+              </div>
+               
 
             </div>
 

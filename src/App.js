@@ -9,6 +9,7 @@ import Projects from './components/projects/Projects';
 import Project1Details from './components/projects/Project1Details';
 import Project2Details from './components/projects/Project2Details';
 import Project3Details from './components/projects/Project3Details';
+import Contact from './components/contact/Contact';
 
 
 
@@ -26,6 +27,7 @@ const App = () => {
               <About />
               <Skills />
               <Projects />
+              <Contact />
             </>
           } />
           <Route path="/project1-details" element={<Project1Details />} />

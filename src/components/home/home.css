@@ -122,9 +122,12 @@
 .home__scroll-arrow{
     font-size: 1.25rem;
     color: var(--title-color);
+    transition: transform 0.3s ease;
 }
 
-
+.home__scroll:hover .home__scroll-arrow {
+    transform: translateY(5px);
+}
 
 /*======BREAKPOINTS======*/
 /* For large devices */
