@@ -61,7 +61,7 @@
 
 .footer_copy {
     display: flex;
-    margin-top: 4.5rem;
+    margin-top: 2.5rem;
     color: var(--title-color);
     justify-content: center;
     font-size: var(--smaller-font-size);

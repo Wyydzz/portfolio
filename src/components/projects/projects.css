@@ -89,6 +89,28 @@
 /* === CSS pour projets spécifiques === */
 
 
+.project-details {
+    display: flex;
+    flex-direction: column; /* Garde le titre et le contenu dans une colonne */
+    align-items: first baseline; /* Centre tout horizontalement */
+    margin-top: 10rem; /* Ajoute de l'espace en haut */
+}
+
+.section__title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--title-color, black); /* Couleur par défaut noire */
+    text-align: center;
+}
+
+.section__subtitle {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--subtitle-color, gray); /* Couleur par défaut grise */
+    margin-bottom: 2rem;
+    text-align: center;
+}
 
 
 

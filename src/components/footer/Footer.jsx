@@ -8,7 +8,7 @@ const Footer = () => {
         <footer className="footer">
             <div className="footer_container container">
                 <h1 className="footer_title">
-                    Grégory
+                    Grégory.
                 </h1>
                 <ul className="footer_list">
                     <li>

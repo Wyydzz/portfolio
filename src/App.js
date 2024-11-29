@@ -11,6 +11,7 @@ import Project2Details from './components/projects/Project2Details';
 import Project3Details from './components/projects/Project3Details';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
+import Scrollup from './components/scrollup/Scrollup';
 
 
 
@@ -29,7 +30,7 @@ const App = () => {
               <Skills />
               <Projects />
               <Contact />
-              <Footer />
+              
             </>
           } />
           <Route path="/project1-details" element={<Project1Details />} />
@@ -37,7 +38,10 @@ const App = () => {
           <Route path="/project3-details" element={<Project3Details />} />
         </Routes>
       </main>
+      <Footer />
+      <Scrollup />
     </Router>
+    
   )
 }
 
