@@ -10,6 +10,7 @@ import Project1Details from './components/projects/Project1Details';
 import Project2Details from './components/projects/Project2Details';
 import Project3Details from './components/projects/Project3Details';
 import Contact from './components/contact/Contact';
+import Footer from './components/footer/Footer';
 
 
 
@@ -28,6 +29,7 @@ const App = () => {
               <Skills />
               <Projects />
               <Contact />
+              <Footer />
             </>
           } />
           <Route path="/project1-details" element={<Project1Details />} />

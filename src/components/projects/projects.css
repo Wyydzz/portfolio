@@ -1,7 +1,4 @@
 
-/** NOTE : CE FICHIER SEMBLAIT POSER PB A LA SECTION HOME ???????????? **/  
-
-
 .projects.section{
     display: flex;
     flex-direction: column; /* Pour garder le titre et le contenu dans une seule colonne */
@@ -11,6 +8,7 @@
 .projects__container {
     grid-template-columns: repeat(3, 1fr); 
     column-gap: 7rem;
+    /* justify-content: center; */
 }
 
 /* Individual project item */
@@ -90,39 +88,20 @@
 
 /* === CSS pour projets spécifiques === */
 
-.project-details {
-    display: flex;
-    flex-direction: column; /* Garde le titre et le contenu dans une colonne */
-    align-items: first baseline; /* Centre tout horizontalement */
-    margin-top: 10rem; /* Ajoute de l'espace en haut */
-}
-
-.section__title {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    color: var(--title-color, black); /* Couleur par défaut noire */
-    text-align: center;
-}
-
-.section__subtitle {
-    font-size: 1.2rem;
-    font-style: italic;
-    color: var(--subtitle-color, gray); /* Couleur par défaut grise */
-    margin-bottom: 2rem;
-    text-align: center;
-}
 
 
 
-/* Responsive Design */
+
+/* BREAK POINTS */
 
 @media screen and (max-width: 992px) {
+   
+
     .projects__container {
-        grid-template-columns: repeat(1fr); /* 2 columns on tablets */
-        justify-content: center;
-        column-gap: 2rem;
-        /* margin-left: (2.5rem); */
+        grid-template-columns: 1fr; /* Une seule colonne sur petits écrans */
+        justify-content: center; /* Centre les éléments */
+        column-gap: 1rem; /* Réduit l'espace entre les colonnes */
+        padding: 0 1rem; /* Évite les débordements sur les côtés */   
     }
 
 }
