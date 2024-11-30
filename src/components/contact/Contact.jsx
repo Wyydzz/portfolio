@@ -90,11 +90,11 @@ const Contact = () => {
                     <form ref={form} onSubmit={sendEmail} className="contact__form">
                         <div className="contact__form-div">
                             <label className="contact__form-tag">Name</label>
-                            <input type="text" name="name" className="contact__form-input" placeholder="Insert your name" />
+                            <input type="text" name="name" className="contact__form-input" placeholder="Insert your name" required />
                         </div>
                         <div className="contact__form-div">
                             <label className="contact__form-tag">Mail</label>
-                            <input type="email" name="email" className="contact__form-input" placeholder="Insert your email" />
+                            <input type="email" name="email" className="contact__form-input" placeholder="Insert your email" required />
                         </div>
                         <div className="contact__form-div contact__form-area">
                             <label className="contact__form-tag">Message</label>
@@ -122,7 +122,7 @@ const Contact = () => {
                                 </svg>
                             </button>
                         </div>
-                        {emailStatus === 'success' && <p className='success_message'>Your email has been sent successfully !</p>}
+                        {emailStatus === 'success' && <p className='success_message'>Your message has been sent successfully !</p>}
                         {emailStatus === 'error' && <p className='error_message'>Something went wrong. Please try again.</p>}
                     </form>
                 </div>
