@@ -1,24 +1,53 @@
 import React, { useState } from "react";
 import "./projectdetails.css";
-import BarCodeImg from '../../assets/assets/barcode.jpg';
+import BarCodeImg1 from '../../assets/assets/barcode.jpg';
+import BarCodeImg2 from '../../assets/assets/barcode2.jpg';
+import BarCodeImg3 from '../../assets/assets/barcode3.jpg';
+import ArrowForwardTwoToneIcon from '@mui/icons-material/ArrowForwardTwoTone';
+import ArrowBackTwoToneIcon from '@mui/icons-material/ArrowBackTwoTone';
+
 
 const Project1Details = () => {
     const [activeTab, setActiveTab] = useState("overview");
+    const [currentImage, setCurrentImage] = useState("0") // Etat pour suivre l'image active
+
+    const images = [BarCodeImg1, BarCodeImg2, BarCodeImg3]; // Liste des images à afficher
+
+    const nextImage = () => {
+        setCurrentImage((prev) => (prev + 1) % images.length); // affiche l'image suivante
+    }
+
+    const prevImage = () => {
+        setCurrentImage((prev) => (prev - 1 + images.length) % images.length); // affiche l'image précédente
+    }
 
     return (
-        <div className="project-details">
-            <div className="project-details__header">
-                <h1 className="project-details__title">Projet 1</h1>
-                <p className="project-details__subtitle">
-                    A C-based dice game project focusing on planning and logic circuits.
-                </p>
-            </div>
 
-            <div className="project-details__content container">
-                {/* Image Section */}
-                <div className="project-details__image">
-                    <img src={BarCodeImg} alt="Pig Game Project" />
+
+        <section className="test__section">
+            <div className="project-details__header">
+                    <h1 className="project-details__title">Projet 1</h1>
+                    <p className="project-details__subtitle">
+                        A C-based dice game project focusing on planning and logic circuits.
+                    </p>
                 </div>
+            <div className="projectdetails__container container grid">
+                
+
+                {/* Image Section avec carrousel*/}
+                <div className="project-details__image">
+                    <button className="arrow prev" onClick={prevImage}>
+                        <ArrowBackTwoToneIcon className="arrow__button-icon" />
+                    </button>
+                    <img src={images[currentImage]} alt="Project" className="carousel-image" />
+                    <button className="arrow next" onClick={nextImage}>
+                        <ArrowForwardTwoToneIcon className="arrow__button-icon" />
+                    </button>
+                </div>
+
+
+
+
 
                 {/* Info Section */}
                 <div className="project-details__info">
@@ -85,7 +114,11 @@ const Project1Details = () => {
                     </div>
                 </div>
             </div>
-        </div>
+
+        </section>
+
+
+
     );
 };
 
