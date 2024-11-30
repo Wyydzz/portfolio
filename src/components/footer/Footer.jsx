@@ -10,7 +10,7 @@ const Footer = () => {
                 <h1 className="footer_title">
                     Grégory.
                 </h1>
-                <ul className="footer_list">
+                {/* <ul className="footer_list">
                     <li>
                         <a href="#about" className="footer_link">About</a>
                     </li>
@@ -20,7 +20,7 @@ const Footer = () => {
                     <li>
                         <a href="#projects" className="footer_link">Projects</a>
                     </li>
-                </ul>
+                </ul> */}
                 <div className="footer_social">
                     <a href="https://www.linkedin.com/in/gregory-henry/" className="footer_social-link" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={faLinkedin} className="nav__icon" />
