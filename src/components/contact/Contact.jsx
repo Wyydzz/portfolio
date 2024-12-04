@@ -73,7 +73,7 @@ const Contact = () => {
 
                             <h3 className="contact__card-title">Messenger</h3>
                             <span className="contact__card-data">
-                                Changeme
+                                m.me/GregHhenry
                             </span>
                             <a href="https://m.me/GregHhenry" className="contact__button" target="_blank" rel="noopener noreferrer">Write me {" "}
                                 {/*insérer icone ici et ajouter classe contact__button-icon*/}
