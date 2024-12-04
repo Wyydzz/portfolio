@@ -10,7 +10,7 @@ const Backend = () => {
             <div className="skills__data">
                 <VerifiedTwoToneIcon className="badge-check"/>
                 <div>
-                    <h3 className="skills__name">PHP</h3>
+                    <h3 className="skills__name">Java</h3>
                     
                 </div>
             </div>
@@ -24,7 +24,7 @@ const Backend = () => {
             <div className="skills__data">
                 <VerifiedTwoToneIcon className="badge-check"/>
                 <div>
-                    <h3 className="skills__name">Java</h3>
+                    <h3 className="skills__name">C++</h3>
                     
                 </div>
             </div>
@@ -43,14 +43,14 @@ const Backend = () => {
             <div className="skills__data">
                 <VerifiedTwoToneIcon className="badge-check"/>
                 <div>
-                    <h3 className="skills__name">Firebase</h3>
+                    <h3 className="skills__name">MQTT</h3>
                     
                 </div>
             </div>
             <div className="skills__data">
                 <VerifiedTwoToneIcon className="badge-check"/>
                 <div>
-                    <h3 className="skills__name">C++</h3>
+                    <h3 className="skills__name">PHP</h3>
                     
                 </div>
             </div>

@@ -3,8 +3,8 @@
 /* Global reset for the component */
 .test__section {
   padding: 2rem;
-  color: #333;
-  background-color: #f9f9f9;
+  color: var(--text-color);
+  /* background-color: #f9f9f9; */
 }
 
 /* Header Styles */
@@ -14,9 +14,10 @@
 }
 
 .project-details__title {
+  margin-left: 2.5rem;
   font-size: 2.5rem;
   font-weight: bold;
-  color: #0078d4;
+  color: var(--title-color-dark);
   margin-top: 30px;
   margin-bottom: 0.5rem;
 }
@@ -41,43 +42,62 @@
 }
 
 /* Image Carousel */
-.project-details__image {
+/* .project-details__image {
   position: relative;
   text-align: center;
+} */
+
+.project-details__image {
+  position: relative; /* Conteneur pour positionner les flèches */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.carousel-image {
+/* .carousel-image {
   max-width: 100%;
-  max-height: 500px; /* Taille maximale pour éviter que l'image soit trop grande */
+  max-height: 500px; 
   width: auto;
   height: auto;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(var(--body-color-rgb), 0.4);
+  transition: transform 0.2s ease-in-out; 
+  cursor: grab; 
+} */
+
+.carousel-image {
+  max-width: 100%;
+  max-height: 500px; /* Empêcher des images trop grandes */
+  object-fit: contain; /* Maintenir les proportions de l'image */
+  border-radius: 10px;
+  transition: transform 0.2s ease-in-out;
 }
+
 
 .arrow {
   position: absolute;
-  top: 50%;
+  top: 50%; /* Centrer verticalement par rapport à l'image */
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: transparent; /* Fond semi-transparent pour mieux se démarquer */
   border: none;
   padding: 0.5rem;
   border-radius: 50%;
-  color: white;
+  color: var(--text-color);
   cursor: pointer;
   z-index: 10;
 }
 
 .arrow:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  color: rgba(var(--body-color-rgb), 0.8);
 }
 
+
 .arrow.prev {
-  left: -1.5rem;
+  left: -2rem; /* Distance ajustée par rapport au bord gauche de l'image */
 }
 
 .arrow.next {
-  right: -1.5rem;
+  right: -2rem; /* Distance ajustée par rapport au bord droit de l'image */
 }
 
 .arrow__button-icon {
@@ -87,9 +107,9 @@
 /* Info Section */
 .project-details__info {
   padding: 1rem;
-  background-color: white;
+  background-color: var(--body-color);
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(var(--body-color-rgb), 0.2);
 }
 
 /* Tabs */
@@ -106,18 +126,20 @@
   border: none;
   font-size: 1rem;
   font-weight: bold;
-  color: var(--text-color); /* Ajuste selon ton thème */
+  color: var(--title-color); /* Ajuste selon ton thème */
   cursor: pointer;
   transition: color 0.3s ease;
 }
 
 .tab-links:hover {
   color: var(--text-color); /* Couleur au survol */
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
 }
 
 .tab-links::after {
   content: '';
-  width: 0;
+  width: 0%;
   height: 3px;
   background: var(--text-color); /* Ligne colorée */
   position: absolute;
@@ -127,19 +149,18 @@
 }
 
 .tab-links.active::after {
-  width: 50%; /* Largeur de la ligne active */
+  width: 100%; /* Largeur de la ligne active */
 }
 
 
 /* Tab content */
-.tab-content {
-  background: var(--container-color);
-  border-radius: 8px;
+.tab-content { 
   padding: 1rem;
   
 }
 .tab-panel {
   animation: fadeIn 0.3s ease-in-out;
+  text-align: justify;
 }
 
 @keyframes fadeIn {
@@ -167,6 +188,61 @@
 }
 
 .tab-panel li strong {
-  color: #0078d4;
+  color: var(--title-color-dark);
   margin-right: 0.5rem;
+}
+
+/** MODAL **/
+.modal {
+  display: none; /* Masquer la modale par défaut */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  background-color: rgba(var(--body-color-rgb), 0.8); /* Fond semi-transparent */
+  padding: 1rem;
+}
+
+.modal img {
+  max-width: 95vw;
+  max-height: 95vh;
+  border-radius: 10px;
+}
+
+.modal.active {
+  display: flex; /* Afficher la modale quand elle est active */
+  align-items: center;
+  justify-content: center;
+}
+
+.tab-panel .badge-check{
+  font-size: 1rem;
+  color: var(--title-color);
+  margin-right: 1rem;
+}
+
+/*======BREAKPOINTS======*/
+/* For large devices */
+@media screen and (max-width: 992px){
+
+}
+
+/* For medium devices */
+@media screen and (max-width: 768px) {
+  .project-details__title {
+    margin-left: 1rem;
+    
+  }
+}
+
+
+/* For small devices */
+@media screen and (max-width: 350px){
+
+  .project-details__title {
+    margin-left: 1rem;
+    
+  }
+ 
 }

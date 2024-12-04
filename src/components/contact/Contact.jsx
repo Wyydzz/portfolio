@@ -75,7 +75,7 @@ const Contact = () => {
                             <span className="contact__card-data">
                                 Changeme
                             </span>
-                            <a href="https://m.me/Naysqweak" className="contact__button" target="_blank" rel="noopener noreferrer">Write me {" "}
+                            <a href="https://m.me/GregHhenry" className="contact__button" target="_blank" rel="noopener noreferrer">Write me {" "}
                                 {/*insérer icone ici et ajouter classe contact__button-icon*/}
                                 <ArrowForwardTwoToneIcon className="contact__button-icon" />
                             </a>

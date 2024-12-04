@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import "./projectdetails.css";
-import BarCodeImg1 from '../../assets/assets/barcode.jpg';
-import BarCodeImg2 from '../../assets/assets/barcode2.jpg';
-import BarCodeImg3 from '../../assets/assets/barcode3.jpg';
+import techno1 from '../../assets/assets/techno1.png';
+import techno2 from '../../assets/assets/techno2.png';
+import techno3 from '../../assets/assets/techno3.png';
+import techno4 from '../../assets/assets/techno4.png';
+import techno6 from '../../assets/assets/techno5.png';
+import techno5 from '../../assets/assets/techno6.png';
+import VerifiedTwoToneIcon from '@mui/icons-material/VerifiedTwoTone';
 import ArrowForwardTwoToneIcon from '@mui/icons-material/ArrowForwardTwoTone';
 import ArrowBackTwoToneIcon from '@mui/icons-material/ArrowBackTwoTone';
 
@@ -11,7 +15,7 @@ const Project1Details = () => {
     const [activeTab, setActiveTab] = useState("overview");
     const [currentImage, setCurrentImage] = useState("0") // Etat pour suivre l'image active
 
-    const images = [BarCodeImg1, BarCodeImg2, BarCodeImg3]; // Liste des images à afficher
+    const images = [techno1, techno2, techno3, techno4, techno5, techno6]; // Liste des images à afficher
 
     const nextImage = () => {
         setCurrentImage((prev) => (prev + 1) % images.length); // affiche l'image suivante
@@ -21,31 +25,49 @@ const Project1Details = () => {
         setCurrentImage((prev) => (prev - 1 + images.length) % images.length); // affiche l'image précédente
     }
 
+
+    /** Modal */
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [modalImage, setModalImage] = useState("");
+
+    const openModal = (imgSrc) => {
+        setModalImage(imgSrc);
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+    };
+
     return (
 
 
         <section className="test__section">
             <div className="project-details__header">
-                    <h1 className="project-details__title">Projet 1</h1>
-                    <p className="project-details__subtitle">
-                        A C-based dice game project focusing on planning and logic circuits.
-                    </p>
-                </div>
+                <h1 className="project-details__title">Project 1</h1>
+                <p className="project-details__subtitle">
+                    Secure Remote Control and Data Management of a PLC Using MQTT and VPN Integration.
+                </p>
+            </div>
             <div className="projectdetails__container container grid">
-                
+
 
                 {/* Image Section avec carrousel*/}
                 <div className="project-details__image">
                     <button className="arrow prev" onClick={prevImage}>
                         <ArrowBackTwoToneIcon className="arrow__button-icon" />
                     </button>
-                    <img src={images[currentImage]} alt="Project" className="carousel-image" />
+                    <img src={images[currentImage]} alt="Project" className="carousel-image" onClick={() => openModal(images[currentImage])} />
                     <button className="arrow next" onClick={nextImage}>
                         <ArrowForwardTwoToneIcon className="arrow__button-icon" />
                     </button>
                 </div>
 
-
+                {isModalOpen && (
+                    <div className="modal active" onClick={closeModal}>
+                        <img src={modalImage} alt="Zoomed Project" />
+                    </div>
+                )}
 
 
 
@@ -64,20 +86,16 @@ const Project1Details = () => {
                         >
                             Skills
                         </button>
-                        <button
-                            className={`tab-links ${activeTab === "electronics" ? "active" : ""}`}
-                            onClick={() => setActiveTab("electronics")}
-                        >
-                            Electronics
-                        </button>
+
                     </div>
 
                     <div className="tab-content">
                         {activeTab === "overview" && (
                             <div className="tab-panel">
                                 <p>
-                                    The Pig Game is a simple dice game designed in the C programming language.
-                                    This project allowed me to implement planning techniques and improve my coding skills.
+                                    The objective of this project was to <strong>ensure the security and controlled access to the data</strong> of an automated system while making it accessible to authorized users through a web interface.<br /> The automated system itself was responsible for <strong>sorting tubes of beads</strong> of different colors into their designated locations, ensuring efficient organization.<br /> Another key goal of the project was to <strong>enable remote control of the automated system via VPN</strong>, specifically to force values on the system to activate colored lamps.
+
+                                    To achieve this, an <strong>MQTT broker</strong> was implemented, allowing MQTT clients to read or publish data.<br /> The system relied on an <strong>Ewon device</strong> connected to the automated system, which published the system’s data to the MQTT broker. Authorized users were able to connect to the Ewon via a <strong>secure VPN</strong>, ensuring controlled and secure access to the system. <br /> Additionally, a <strong>website </strong>was registered with the MQTT broker, providing a user-friendly platform for <strong>monitoring, controlling, and visualizing</strong> the system’s data and functionality.
                                 </p>
                             </div>
                         )}
@@ -85,32 +103,24 @@ const Project1Details = () => {
                             <div className="tab-panel">
                                 <ul>
                                     <li>
-                                        <strong>Mind Mapping:</strong> Organized project tasks visually.
+                                        <VerifiedTwoToneIcon className="badge-check" />
+                                        <strong>Javascript</strong>
+                                    </li>
+                                    <li><VerifiedTwoToneIcon className="badge-check" />
+                                        <strong>Typescript</strong>
                                     </li>
                                     <li>
-                                        <strong>PERT Chart:</strong> Detailed task breakdown and prioritization.
+                                        <VerifiedTwoToneIcon className="badge-check" />
+                                        <strong>MQTT</strong>
                                     </li>
                                     <li>
-                                        <strong>Gantt Chart:</strong> Improved visualization of deadlines and timelines.
+                                        <VerifiedTwoToneIcon className="badge-check" />
+                                        <strong>PLC configuration</strong>
                                     </li>
                                 </ul>
                             </div>
                         )}
-                        {activeTab === "electronics" && (
-                            <div className="tab-panel">
-                                <ul>
-                                    <li>
-                                        <strong>Logic Circuits:</strong> Worked with inverters, counters, and multiplexers.
-                                    </li>
-                                    <li>
-                                        <strong>PCB Design:</strong> Created printed circuit boards using Proteus and ARES.
-                                    </li>
-                                    <li>
-                                        <strong>Communication Card:</strong> Used VELLEMAN VM110N to interface with the computer.
-                                    </li>
-                                </ul>
-                            </div>
-                        )}
+
                     </div>
                 </div>
             </div>

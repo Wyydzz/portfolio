@@ -10,14 +10,14 @@ const Frontend = () => {
                 <div className="skills__data">
                     <VerifiedTwoToneIcon className="badge-check"/>
                     <div>
-                        <h3 className="skills__name">HTML</h3>
+                        <h3 className="skills__name">Javascript</h3>
                         
                     </div>
                 </div>
                 <div className="skills__data">
                     <VerifiedTwoToneIcon className="badge-check"/>
                     <div>
-                        <h3 className="skills__name">CSS</h3>
+                        <h3 className="skills__name">Typescript</h3>
                         
                     </div>
                 </div>
@@ -25,7 +25,7 @@ const Frontend = () => {
                 <div className="skills__data">
                     <VerifiedTwoToneIcon className="badge-check"/>
                     <div>
-                        <h3 className="skills__name">JavaScript</h3>
+                        <h3 className="skills__name">HTML</h3>
                         
                     </div>
                 </div>
@@ -36,7 +36,7 @@ const Frontend = () => {
                 <div className="skills__data">
                     <VerifiedTwoToneIcon className="badge-check"/>
                     <div>
-                        <h3 className="skills__name">Typescript</h3>
+                        <h3 className="skills__name">CSS</h3>
                         
                     </div>
                 </div>
